@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: Corner Room v1WhiteboxingMaterials.ma
-//Last modified: Sat, Sep 07, 2024 09:08:39 PM
+//Name: Corner Room v1.2 Flooring.ma
+//Last modified: Sat, Sep 07, 2024 09:09:35 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "7BC6D3D4-4556-3938-8A4E-B49E39E51ED7";
+fileInfo "UUID" "F9311B85-4B6A-5099-0B09-EE9E1B293937";
 createNode transform -s -n "persp";
 	rename -uid "B6C4202A-4CC0-8F28-EE55-88936672DE8C";
 	setAttr ".v" no;
@@ -4666,10 +4666,10 @@ createNode lambert -n "Floor_Color";
 	setAttr ".dc" 0.83225804567337036;
 	setAttr ".c" -type "float3" 0.10967742 0.068343505 0.047320221 ;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "2069D13C-40E1-AD88-3B5C-54957D81FDE8";
+	rename -uid "9D036AE5-4C4C-98B3-EB3D-F1A6BB128ECE";
 	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "7E0DC00F-4EF6-4202-2094-418BBD90B1B4";
+	rename -uid "F0D27A43-4CBC-F0A1-70EA-C4A35B5F728D";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -671.66712034922818 -479.75841663239589 ;
 	setAttr ".tgi[0].vh" -type "double2" 51.019067622312868 257.51409806884607 ;
@@ -4886,4 +4886,4 @@ connectAttr "Bed_White.msg" ":defaultShaderList1.s" -na;
 connectAttr "Book_Temp.msg" ":defaultShaderList1.s" -na;
 connectAttr "Floor_Color.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of Corner Room v1WhiteboxingMaterials.ma
+// End of Corner Room v1.2 Flooring.ma
