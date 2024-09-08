@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Corner Room v1.ma
-//Last modified: Sat, Sep 07, 2024 07:13:12 PM
+//Last modified: Sat, Sep 07, 2024 07:25:59 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "56FB2962-4B28-74C1-4AB6-2DB43C89490D";
+fileInfo "UUID" "F680CB5B-4D1F-117E-C4E7-3CB7807137C7";
 createNode transform -s -n "persp";
 	rename -uid "B6C4202A-4CC0-8F28-EE55-88936672DE8C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 14.650076450785692 8.4523166263354987 3.0126153414011902 ;
-	setAttr ".r" -type "double3" -16.538352729468269 435.39999999939295 0 ;
+	setAttr ".t" -type "double3" 19.726846374314974 6.5114899830499544 16.614531820458382 ;
+	setAttr ".r" -type "double3" -6.9383527294683329 411.79999999939281 -1.2857824640227178e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8E85B2D5-4266-B781-BBE9-508D9506FCB6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 19.818567744252281;
+	setAttr ".coi" 30.026656149279379;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -329,7 +329,7 @@ createNode mesh -n "Stand_Shape2" -p "Stand_2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[1:7]" -type "float3"  -0.73554927 0 0 0 0.6095233 
+	setAttr -s 7 ".pt[1:7]" -type "float3"  -0.73554927 0 0 0 0.6095233 
 		0 -0.73554927 0.6095233 0 0 0.6095233 0.73058623 -0.73554927 0.6095233 0.73058623 
 		0 0 0.73058623 -0.73554927 0 0.73058623;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
@@ -385,7 +385,7 @@ createNode mesh -n "Stand_Shape3" -p "Stand_3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[1:7]" -type "float3"  -0.73554927 0 0 0 0.6095233 
+	setAttr -s 7 ".pt[1:7]" -type "float3"  -0.73554927 0 0 0 0.6095233 
 		0 -0.73554927 0.6095233 0 0 0.6095233 0.73058623 -0.73554927 0.6095233 0.73058623 
 		0 0 0.73058623 -0.73554927 0 0.73058623;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
@@ -441,7 +441,7 @@ createNode mesh -n "Stand_Shape4" -p "Stand_4";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".pt[1:7]" -type "float3"  -0.73554927 0 0 0 0.6095233 
+	setAttr -s 7 ".pt[1:7]" -type "float3"  -0.73554927 0 0 0 0.6095233 
 		0 -0.73554927 0.6095233 0 0 0.6095233 0.73058623 -0.73554927 0.6095233 0.73058623 
 		0 0 0.73058623 -0.73554927 0 0.73058623;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
@@ -1606,7 +1606,6 @@ createNode mesh -n "LadderRShape" -p "transform7";
 	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 2 ".ciog[0].cog";
 	setAttr ".pv" -type "double2" 0.625 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
@@ -1679,11 +1678,9 @@ createNode mesh -n "LadderLShape" -p "transform6";
 	rename -uid "CDCF1116-457B-2D70-1EFB-8E85497B3EF4";
 	setAttr -k off ".v";
 	setAttr ".io" yes;
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 1 "f[0:33]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 2 ".ciog[0].cog";
 	setAttr -s 6 ".gtag";
 	setAttr ".gtag[0].gtagnm" -type "string" "back";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 8 "f[2]" "f[7]" "f[11]" "f[15]" "f[19]" "f[23]" "f[27]" "f[31]";
@@ -1834,7 +1831,7 @@ createNode mesh -n "LadderR1Shape" -p "LadderR1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 11 ".pt";
+	setAttr -s 6 ".pt";
 	setAttr ".pt[0]" -type "float3" 0 0.085145019 0 ;
 	setAttr ".pt[6]" -type "float3" 0 0.085145019 0 ;
 	setAttr ".pt[13]" -type "float3" 0 0.085145019 0 ;
@@ -1842,20 +1839,20 @@ createNode mesh -n "LadderR1Shape" -p "LadderR1";
 	setAttr ".pt[61]" -type "float3" 0 0.085145019 0 ;
 	setAttr ".pt[68]" -type "float3" 0 0.085145019 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3012021D-4913-724F-DF66-70A286B41B74";
+	rename -uid "B79779BE-4CCD-844F-77A7-EA83148A0DA7";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "3F7373AC-44F9-1185-CD60-68B25D6B9CBC";
+	rename -uid "D31A1730-4B46-50FC-A986-02A1D0A50F0C";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "8C0C42EE-4918-AE4C-DCE2-CFAF15D935F4";
+	rename -uid "29E0D864-4ED7-75BA-E922-FDAD1ADABD69";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7A15DDAA-4BB8-FE15-5941-D5B0D3D5D10A";
+	rename -uid "48067F6E-4F4A-83E2-78F2-C48BB2B81B8E";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B91BF0F2-4091-5939-B3B2-1083013A591E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "D30188BD-456B-7D93-E170-81B6A153F053";
+	rename -uid "4CD16AD1-4D0D-52A3-BA29-C28C43D459DE";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "71C5D697-469D-3530-4440-7CBC3282DBD5";
 	setAttr ".g" yes;
@@ -2151,7 +2148,7 @@ createNode polyBridgeEdge -n "polyBridgeEdge3";
 	setAttr ".sv2" 83;
 	setAttr ".d" 1;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "683F91AD-4E63-3437-E662-B7AF715D786A";
+	rename -uid "32FB137A-43C3-0A6E-F171-AD915047BDA3";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
