@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: Corner Room v1.ma
-//Last modified: Sat, Sep 14, 2024 09:27:01 PM
+//Name: Corner Room v1.4 RedoneWhiteboxing.ma
+//Last modified: Sat, Sep 14, 2024 09:27:28 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.4.1";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "F8094577-4D89-0FAD-E8DD-ECB0287ACCCD";
+fileInfo "UUID" "13DA42E1-4C15-6243-6E02-B988FC7F3C62";
 createNode transform -s -n "persp";
 	rename -uid "B6C4202A-4CC0-8F28-EE55-88936672DE8C";
 	setAttr ".v" no;
@@ -5413,7 +5413,7 @@ createNode polyCube -n "polyCube5";
 	rename -uid "C2F9E29D-4A2B-828B-BA04-198B826F9FD3";
 	setAttr ".cuv" 4;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "AC4F042B-42A0-700F-0352-DE99A6737EA6";
+	rename -uid "970C6CD1-4D42-A0C2-3EED-DE90A345C0D4";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
@@ -5683,4 +5683,4 @@ connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId8.msg" ":initialShadingGroup.gn" -na;
-// End of Corner Room v1.ma
+// End of Corner Room v1.4 RedoneWhiteboxing.ma
