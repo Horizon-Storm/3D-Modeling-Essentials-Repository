@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: BoatDock.ma
-//Last modified: Sun, Oct 13, 2024 03:19:01 PM
+//Name: BoatDock V1.2 FinishedWater.ma
+//Last modified: Sun, Oct 13, 2024 03:19:27 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "F1EF35A2-47AC-C146-D02D-D083728FFEEA";
+fileInfo "UUID" "11E77DDE-4712-9AA0-97DC-F3B7EB4726A5";
 createNode transform -s -n "persp";
 	rename -uid "A6620E78-48AD-8E87-A42A-2B80236B3553";
 	setAttr ".v" no;
@@ -15737,7 +15737,7 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 	setAttr ".tgi[0].ni[10].y" 340.47616577148438;
 	setAttr ".tgi[0].ni[10].nvs" 1923;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "C8BFB6B3-43FA-E859-F895-6F8446873DE9";
+	rename -uid "5D528F42-4F0C-76E1-0373-7CBFA3C07EDF";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 1;
@@ -15914,4 +15914,4 @@ connectAttr "DockTeather2Shape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "LadderShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "LadderShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
-// End of BoatDock.ma
+// End of BoatDock V1.2 FinishedWater.ma
