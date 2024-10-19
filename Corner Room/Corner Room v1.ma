@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Corner Room v1.ma
-//Last modified: Sat, Oct 19, 2024 03:35:23 PM
+//Last modified: Sat, Oct 19, 2024 03:45:17 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "colorCorrect" "lookdevKit" "1.0";
@@ -16,17 +16,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "0FCBC8C9-4639-072D-D193-9E8E7D1DF113";
+fileInfo "UUID" "301F0FF4-41BA-572D-7F28-5E8429DAEDD2";
 createNode transform -s -n "persp";
 	rename -uid "B6C4202A-4CC0-8F28-EE55-88936672DE8C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.9146780719315952 8.7847826985557909 15.222199114299112 ;
-	setAttr ".r" -type "double3" -18.938352505079216 6145.0000000010496 0 ;
+	setAttr ".t" -type "double3" -2.6933537270983692 1.6457638777779016 1.7664611277294726 ;
+	setAttr ".r" -type "double3" -7.5383525020078359 6067.8000000027514 1.297323412379684e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "8E85B2D5-4266-B781-BBE9-508D9506FCB6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 15.578314694613745;
+	setAttr ".coi" 3.4713354677455075;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -92,6 +92,7 @@ createNode nucleus -n "nucleus1";
 	setAttr -s 19 ".nips";
 createNode transform -n "Living_Room";
 	rename -uid "AF9ABE33-4C21-1B2A-97B2-BAA2D4C4A517";
+	setAttr ".v" no;
 createNode transform -n "Right_Wall" -p "Living_Room";
 	rename -uid "D842C950-46C3-7CD9-CE14-3AAD331AEC8D";
 	setAttr ".t" -type "double3" 0 3.9947192370891571 -4.25 ;
@@ -3200,6 +3201,7 @@ createNode nRigid -n "nRigidShape3" -p "nRigid3";
 	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
 createNode transform -n "Tiles";
 	rename -uid "20B470A3-4710-7C92-C769-BC956F7701A9";
+	setAttr ".v" no;
 createNode transform -n "Tile_Row_1" -p "Tiles";
 	rename -uid "499A37D6-46D2-AC49-828F-0F8D764E6AC7";
 	setAttr ".rp" -type "double3" 4 1.1406434428928858e-08 4 ;
@@ -5613,6 +5615,7 @@ createNode mesh -n "Tile05Shape" -p "|Tiles|Tile_Row_8|Tile05";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Bed_Set";
 	rename -uid "B8D5011B-4CE2-AB80-C666-43952F5C3085";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -2.9001038036226006 0 0 ;
 createNode transform -n "Bed_Colliders" -p "Bed_Set";
 	rename -uid "33A0F33F-4DF9-14A9-7AB9-D499F3211533";
@@ -33947,6 +33950,7 @@ createNode nCloth -n "nClothShape1" -p "nCloth1";
 	setAttr ".lifespanPP0" -type "doubleArray" 0 ;
 createNode transform -n "Objects";
 	rename -uid "079E37D6-4225-C155-94A8-A5984CBCA71A";
+	setAttr ".v" no;
 createNode transform -n "Telescope" -p "Objects";
 	rename -uid "73E1680D-4E73-84DC-7CB9-4BBF048AC39A";
 	setAttr ".t" -type "double3" 2.796670563153083 0 -2.0500571559037404 ;
@@ -46280,6 +46284,7 @@ createNode aiMeshLight -n "light_Flashlight_Bulb1Shape" -p "light_Flashlight_Bul
 	setAttr ".ai_exposure" 0.064935058355331421;
 createNode transform -n "FlashlightSpot";
 	rename -uid "D29A633E-4B47-4904-9386-239AC63D3A92";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.72144126696532773 0.3837928063075613 0.9265437978746397 ;
 	setAttr ".r" -type "double3" 0 -67.055171151063035 0 ;
 createNode spotLight -n "FlashlightSpotShape" -p "FlashlightSpot";
@@ -46300,6 +46305,7 @@ createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
 	setAttr ".aal" -type "attributeAlias" {"exposure","aiExposure"} ;
 createNode transform -n "Moonlight";
 	rename -uid "7B764C5D-444E-D76A-CCC5-43B89BD9D0DE";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 2.7440549559401282 7.0685249030796076 -13.510195093553875 ;
 	setAttr ".r" -type "double3" 180 0 0 ;
 	setAttr ".s" -type "double3" 1.5682654518357804 3.4967944643382514 1 ;
@@ -46312,6 +46318,7 @@ createNode areaLight -n "MoonlightShape" -p "Moonlight";
 	setAttr ".ai_roundness" 0.4675324559211731;
 createNode transform -n "camera1";
 	rename -uid "C0A92F81-4782-E3A0-E60C-668230A3DC66";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 18.309251407808674 9.5830239217101525 9.6919263873981034 ;
 	setAttr ".r" -type "double3" -18.000000000000338 60.800000000000594 -3.2597024798878903e-15 ;
 createNode camera -n "cameraShape1" -p "camera1";
@@ -46327,6 +46334,7 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".man" -type "string" "camera1_mask";
 createNode transform -n "Moonlight1";
 	rename -uid "1BA6A9E3-4F94-FA2C-DAAB-86B20F6B4CBE";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" 18.309251407808674 9.5830239217101525 9.6919263873981034 ;
 	setAttr ".r" -type "double3" -18.000000000000341 60.800000000000608 -3.2597024798878915e-15 ;
 	setAttr ".s" -type "double3" 1.5682654518357804 3.4967944643382514 1 ;
@@ -46339,9 +46347,11 @@ createNode areaLight -n "Moonlight1Shape" -p "Moonlight1";
 	setAttr ".ai_roundness" 0.4675324559211731;
 createNode transform -n "Monitor";
 	rename -uid "6059BAC4-41F0-E732-F44F-9B8740CBA13D";
-	setAttr ".t" -type "double3" 0.046482019968567961 0 0 ;
+	setAttr ".t" -type "double3" 0.046482019968567961 2.2327193982741522 0 ;
 	setAttr ".r" -type "double3" 270 90 0 ;
-createNode transform -n "Screen" -p "Monitor";
+createNode transform -n "MainMonitor" -p "Monitor";
+	rename -uid "602912EC-4D04-220D-69A3-999E544D2609";
+createNode transform -n "Screen" -p "MainMonitor";
 	rename -uid "139EC6AB-4F36-4B94-D3AF-BBAE56CFF24E";
 createNode mesh -n "ScreenShape" -p "Screen";
 	rename -uid "A25A833C-4860-8DF4-902A-C5911798C30E";
@@ -46558,7 +46568,7 @@ createNode mesh -n "ScreenShape" -p "Screen";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Monitor_Exterior" -p "Monitor";
+createNode transform -n "Monitor_Exterior" -p "MainMonitor";
 	rename -uid "4DD40411-44DB-EF77-9D61-1F9A204E6E4E";
 createNode mesh -n "Monitor_ExteriorShape" -p "Monitor_Exterior";
 	rename -uid "C89024DF-42DD-C443-4E5D-8E8A46E4399C";
@@ -48270,7 +48280,7 @@ createNode mesh -n "Monitor_ExteriorShape" -p "Monitor_Exterior";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Monitor_Light" -p "Monitor";
+createNode transform -n "Monitor_Light" -p "MainMonitor";
 	rename -uid "E65E8E49-496B-5CCC-AAE5-0E84437C3FBD";
 	setAttr ".rp" -type "double3" -1.2372067583317776 0.10500613916629375 -0.87202357715095014 ;
 	setAttr ".sp" -type "double3" -1.2372067583317776 0.10500613916629375 -0.87202357715095014 ;
@@ -49406,7 +49416,7 @@ createNode mesh -n "Monitor_LightShape" -p "Monitor_Light";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "MonitorButton1" -p "Monitor";
+createNode transform -n "MonitorButton1" -p "MainMonitor";
 	rename -uid "978337C4-47DB-CEB4-F69D-1181AC848FEC";
 	setAttr ".rp" -type "double3" -1.2267862744393887 0.08080929655290045 -0.89084158060524121 ;
 	setAttr ".sp" -type "double3" -1.2267862744393887 0.08080929655290045 -0.89084158060524121 ;
@@ -49514,7 +49524,7 @@ createNode mesh -n "MonitorButtonShape1" -p "MonitorButton1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "MonitorButton2" -p "Monitor";
+createNode transform -n "MonitorButton2" -p "MainMonitor";
 	rename -uid "62EADAA0-45DC-5619-F08A-A0B5BE6DB754";
 	setAttr ".rp" -type "double3" -1.1438027052834359 0.08080929655290045 -0.89084158060524121 ;
 	setAttr ".sp" -type "double3" -1.1438027052834359 0.08080929655290045 -0.89084158060524121 ;
@@ -49633,7 +49643,7 @@ createNode mesh -n "MonitorButtonShape2" -p "MonitorButton2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "MonitorButton3" -p "Monitor";
+createNode transform -n "MonitorButton3" -p "MainMonitor";
 	rename -uid "42AB56E5-489A-787E-2EB7-BCAD9871C419";
 	setAttr ".rp" -type "double3" -1.0608376517504012 0.08080929655290045 -0.89084158060524121 ;
 	setAttr ".sp" -type "double3" -1.0608376517504012 0.08080929655290045 -0.89084158060524121 ;
@@ -49751,7 +49761,7 @@ createNode mesh -n "MonitorButtonShape3" -p "MonitorButton3";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "MonitorButton4" -p "Monitor";
+createNode transform -n "MonitorButton4" -p "MainMonitor";
 	rename -uid "FD07C330-4567-F3F8-B6ED-608D72DD4F8D";
 	setAttr ".rp" -type "double3" -0.89490097189252671 0.08080929655290045 -0.89084158060524121 ;
 	setAttr ".sp" -type "double3" -0.89490097189252671 0.08080929655290045 -0.89084158060524121 ;
@@ -49869,7 +49879,7 @@ createNode mesh -n "MonitorButtonShape4" -p "MonitorButton4";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "MonitorButton5" -p "Monitor";
+createNode transform -n "MonitorButton5" -p "MainMonitor";
 	rename -uid "3E3F3BB3-4357-E90D-45FB-B1B8B3C47192";
 	setAttr ".rp" -type "double3" -0.97786602542556134 0.08080929655290045 -0.89084158060524121 ;
 	setAttr ".sp" -type "double3" -0.97786602542556134 0.08080929655290045 -0.89084158060524121 ;
@@ -49988,6 +49998,68 @@ createNode mesh -n "MonitorButtonShape5" -p "MonitorButton5";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "MonitorStand" -p "Monitor";
+	rename -uid "C29E22A6-4DFE-3F7C-36C1-619508A0041B";
+	setAttr ".t" -type "double3" 0 0.046482019968568454 -2.2327193982741522 ;
+	setAttr ".r" -type "double3" 90 0 -90 ;
+createNode transform -n "pCube15" -p "MonitorStand";
+	rename -uid "554222C7-4E3C-530D-538B-9FB1C528B35B";
+	setAttr ".t" -type "double3" 0.14369823974488188 1.7565023037786243 0 ;
+createNode mesh -n "pCubeShape15" -p "pCube15";
+	rename -uid "667F483F-4C9E-6D10-8CB3-6F8AE4418740";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.75 0.5 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCylinder1" -p "MonitorStand";
+	rename -uid "92DEFFAC-4C72-5AE9-65E5-5FB8E071EB41";
+	setAttr ".t" -type "double3" 0.14181614477762805 1.3030679364999278 0 ;
+createNode mesh -n "pCylinderShape1" -p "pCylinder1";
+	rename -uid "D24D1C32-490B-1EFE-55BE-8C9ADE960A8F";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 42 ".pt[0:41]" -type "float3"  -0.87857527 0.71343523 0.26988849 
+		-0.74736071 0.71343523 0.51335829 -0.54298872 0.71343523 0.70657736 -0.28546602 0.71343523 
+		0.83063126 0 0.71343523 0.87337756 0.28546602 0.71343523 0.8306312 0.5429886 0.71343523 
+		0.70657718 0.74736041 0.71343523 0.51335812 0.87857491 0.71343523 0.26988837 0.92378885 
+		0.71343523 0 0.87857491 0.71343523 -0.26988837 0.74736035 0.71343523 -0.51335806 
+		0.54298848 0.71343523 -0.706577 0.28546593 0.71343523 -0.8306309 2.7531046e-08 0.71343523 
+		-0.8733772 -0.28546584 0.71343523 -0.83063084 -0.54298836 0.71343523 -0.70657694 
+		-0.74736017 0.71343523 -0.513358 -0.87857467 0.71343523 -0.26988831 -0.92378861 0.71343523 
+		0 -0.87857527 -0.71343523 0.26988849 -0.74736071 -0.71343523 0.51335829 -0.54298872 
+		-0.71343523 0.70657736 -0.28546602 -0.71343523 0.83063126 0 -0.71343523 0.87337756 
+		0.28546602 -0.71343523 0.8306312 0.5429886 -0.71343523 0.70657718 0.74736041 -0.71343523 
+		0.51335812 0.87857491 -0.71343523 0.26988837 0.92378885 -0.71343523 0 0.87857491 
+		-0.71343523 -0.26988837 0.74736035 -0.71343523 -0.51335806 0.54298848 -0.71343523 
+		-0.706577 0.28546593 -0.71343523 -0.8306309 2.7531046e-08 -0.71343523 -0.8733772 
+		-0.28546584 -0.71343523 -0.83063084 -0.54298836 -0.71343523 -0.70657694 -0.74736017 
+		-0.71343523 -0.513358 -0.87857467 -0.71343523 -0.26988831 -0.92378861 -0.71343523 
+		0 0 0.71343523 0 0 -0.71343523 0;
+createNode transform -n "pCylinder2" -p "MonitorStand";
+	rename -uid "B3433CF1-4E14-18C1-3AAF-668E82EB7162";
+	setAttr ".t" -type "double3" 0 1.0121211822418144 0 ;
+createNode mesh -n "pCylinderShape2" -p "pCylinder2";
+	rename -uid "CA7C86BC-48AA-4549-CAD5-64B0322541A1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.49999998509883881 0.84374997019767761 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "063817D8-47BE-8829-BD7E-51828CCAC656";
 	setAttr -s 25 ".lnk";
@@ -50918,7 +50990,7 @@ createNode blinn -n "BlackPlastic";
 createNode shadingEngine -n "blinn2SG";
 	rename -uid "391AF3C9-4E0F-17F0-6114-C69FEBAC7C27";
 	setAttr ".ihi" 0;
-	setAttr -s 6 ".dsm";
+	setAttr -s 9 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo25";
 	rename -uid "EB8243CD-4F5D-D045-D6C3-47A0972FDF7B";
@@ -50929,6 +51001,7 @@ createNode lambert -n "TempScreen";
 createNode shadingEngine -n "lambert6SG";
 	rename -uid "2B2BE6D9-4B37-F5ED-2FF8-4394C9BDD2E7";
 	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo26";
 	rename -uid "DBC8CDE7-4032-B978-7E66-2D9340423F78";
@@ -50951,11 +51024,74 @@ createNode standardSurface -n "standardSurface4";
 	setAttr ".tdi" 43.971630096435547;
 	setAttr ".e" 9.230769157409668;
 	setAttr ".ec" -type "float3" 0.038400888 1 0 ;
+createNode polyCylinder -n "polyCylinder1";
+	rename -uid "757A3F5D-4A9A-17E0-1CA5-988B322DDC4B";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polyCylinder -n "polyCylinder2";
+	rename -uid "29682CD8-4DAC-DD60-4233-848942EC8599";
+	setAttr ".sc" 1;
+	setAttr ".cuv" 3;
+createNode polyBevel3 -n "polyBevel1";
+	rename -uid "83E23002-4F12-2F61-5C99-86BED83FDA38";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[20:39]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".oaf" yes;
+	setAttr ".f" 1;
+	setAttr ".sg" 4;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyTweak -n "polyTweak6";
+	rename -uid "E5AFEAB3-473D-E670-811A-E3BD742A9C06";
+	setAttr ".uopa" yes;
+	setAttr -s 42 ".tk[0:41]" -type "float3"  -0.4884111 0.96309173 0.075514413
+		 -0.41546714 0.96309173 0.14363694 -0.30185443 0.96309173 0.19769928 -0.15869434 0.96309173
+		 0.23240946 0 0.96309173 0.24436973 0.15869434 0.96309173 0.23240942 0.3018544 0.96309173
+		 0.19769926 0.41546685 0.96309173 0.14363691 0.48841089 0.96309173 0.075514376 0.51354522
+		 0.96309173 0 0.48841089 0.96309173 -0.075514376 0.41546679 0.96309173 -0.14363688
+		 0.30185437 0.96309173 -0.19769922 0.15869427 0.96309173 -0.23240934 1.5304837e-08
+		 0.96309173 -0.24436969 -0.15869418 0.96309173 -0.23240934 -0.30185431 0.96309173
+		 -0.19769917 -0.41546667 0.96309173 -0.14363687 -0.48841077 0.96309173 -0.075514361
+		 -0.5135451 0.96309173 0 -0.4884111 -0.96309173 0.075514413 -0.41546714 -0.96309173
+		 0.14363694 -0.30185443 -0.96309173 0.19769928 -0.15869434 -0.96309173 0.23240946
+		 0 -0.96309173 0.24436973 0.15869434 -0.96309173 0.23240942 0.3018544 -0.96309173
+		 0.19769926 0.41546685 -0.96309173 0.14363691 0.48841089 -0.96309173 0.075514376 0.51354522
+		 -0.96309173 0 0.48841089 -0.96309173 -0.075514376 0.41546679 -0.96309173 -0.14363688
+		 0.30185437 -0.96309173 -0.19769922 0.15869427 -0.96309173 -0.23240934 1.5304837e-08
+		 -0.96309173 -0.24436969 -0.15869418 -0.96309173 -0.23240934 -0.30185431 -0.96309173
+		 -0.19769917 -0.41546667 -0.96309173 -0.14363687 -0.48841077 -0.96309173 -0.075514361
+		 -0.5135451 -0.96309173 0 0 0.96309173 0 0 -0.96309173 0;
+createNode polyCube -n "polyCube1";
+	rename -uid "9DC0F70B-4DAD-B0D6-A436-13AC276DEC5E";
+	setAttr ".cuv" 4;
+createNode polyBevel3 -n "polyBevel2";
+	rename -uid "7A496FEF-4183-7FE0-8F22-33AE14012241";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 4 "e[5]" "e[7]" "e[9]" "e[11]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0.14369823974488188 1.8610369861561096 0 1;
+	setAttr ".oaf" yes;
+	setAttr ".f" 1;
+	setAttr ".sg" 5;
+	setAttr ".at" 180;
+	setAttr ".sn" yes;
+	setAttr ".mv" yes;
+	setAttr ".mvt" 0.0001;
+	setAttr ".sa" 30;
+createNode polyTweak -n "polyTweak7";
+	rename -uid "A651ECDB-4F77-66C6-B676-1CB42D5B39BF";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  0.3970781 0.17434239 0 -0.3970781
+		 0.17434239 0 0.3970781 -0.17434239 0 -0.3970781 -0.17434239 0 0.3970781 -0.17434239
+		 0 -0.3970781 -0.17434239 0 0.3970781 0.17434239 0 -0.3970781 0.17434239 0;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "EB656510-4531-F895-8C85-62AAC157AA89";
+	rename -uid "1CF36FA6-41E8-422E-3615-4CB2F13228FA";
 	setAttr ".sst" -type "string" "";
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "6410FD2B-4844-09D8-EC4C-6D9DE2A73D55";
+	rename -uid "F983A321-4CD9-59E9-03F6-9A927BCCA03E";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -1463.2483254654583 -805.54527079993352 ;
 	setAttr ".tgi[0].vh" -type "double2" -347.44234097005415 509.21876607792291 ;
@@ -51162,7 +51298,7 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -51312,6 +51448,9 @@ connectAttr "light_Flashlight_Bulb1Shape.showOriginalMesh" "Flashlight_Bulb1Shap
 connectAttr "light_Flashlight_Bulb1Shape__LEItem.en" "light_Flashlight_Bulb1Shape.v"
 		;
 connectAttr "Flashlight_Bulb1Shape.o" "light_Flashlight_Bulb1Shape.inMesh";
+connectAttr "polyBevel2.out" "pCubeShape15.i";
+connectAttr "polyCylinder1.out" "pCylinderShape1.i";
+connectAttr "polyBevel1.out" "pCylinderShape2.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "WallColorSG.message" ":defaultLightSet.message";
@@ -51737,6 +51876,9 @@ connectAttr "MonitorButtonShape5.iog" "blinn2SG.dsm" -na;
 connectAttr "MonitorButtonShape3.iog" "blinn2SG.dsm" -na;
 connectAttr "MonitorButtonShape2.iog" "blinn2SG.dsm" -na;
 connectAttr "MonitorButtonShape1.iog" "blinn2SG.dsm" -na;
+connectAttr "pCylinderShape2.iog" "blinn2SG.dsm" -na;
+connectAttr "pCylinderShape1.iog" "blinn2SG.dsm" -na;
+connectAttr "pCubeShape15.iog" "blinn2SG.dsm" -na;
 connectAttr "blinn2SG.msg" "materialInfo25.sg";
 connectAttr "BlackPlastic.msg" "materialInfo25.m";
 connectAttr "TempScreen.oc" "lambert6SG.ss";
@@ -51747,6 +51889,12 @@ connectAttr "standardSurface4.oc" "Light_Yellow3.ss";
 connectAttr "Monitor_LightShape.iog" "Light_Yellow3.dsm" -na;
 connectAttr "Light_Yellow3.msg" "materialInfo27.sg";
 connectAttr "standardSurface4.msg" "materialInfo27.m";
+connectAttr "polyTweak6.out" "polyBevel1.ip";
+connectAttr "pCylinderShape2.wm" "polyBevel1.mp";
+connectAttr "polyCylinder2.out" "polyTweak6.ip";
+connectAttr "polyTweak7.out" "polyBevel2.ip";
+connectAttr "pCubeShape15.wm" "polyBevel2.mp";
+connectAttr "polyCube1.out" "polyTweak7.ip";
 connectAttr "Rug_Middle.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "colorCorrect2.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
