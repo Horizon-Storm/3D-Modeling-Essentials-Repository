@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: GraveYard.ma
-//Last modified: Fri, Oct 25, 2024 04:01:01 PM
+//Last modified: Fri, Oct 25, 2024 04:08:36 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiSkyDomeLight"
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 10 Pro v2009 (Build: 19045)";
-fileInfo "UUID" "D05EEEA7-4FDC-03D7-98DE-72BE3963F099";
+fileInfo "UUID" "424C4CC1-45F2-E031-841D-9688ACD4A004";
 createNode transform -s -n "persp";
 	rename -uid "37EE6301-45BA-6FF3-110C-06A78CA0852B";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -8.3783145006626789 15.602259153102894 24.685943480443797 ;
-	setAttr ".r" -type "double3" -27.338352732988643 1042.1999999987056 -2.012614380535632e-15 ;
+	setAttr ".t" -type "double3" -5.8286017022762771 19.505277197454078 33.957297721494257 ;
+	setAttr ".r" -type "double3" -23.738352733300822 1075.7999999983863 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "64D462F4-43E6-4B2E-F0C8-7D89477C8281";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 26.997496503595098;
+	setAttr ".coi" 41.458733673438154;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -307,7 +307,6 @@ createNode mesh -n "polySurfaceShape2" -p "BaseSmallHS";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Headstones";
 	rename -uid "31D3C964-40BD-6AC9-CCB3-D19199F2A8E5";
-	setAttr ".v" no;
 createNode transform -n "HS_Small_1" -p "Headstones";
 	rename -uid "B83CFA74-4FCF-FF1B-B1BD-7E8F779B3FC4";
 	setAttr ".t" -type "double3" 6.0119566687792449 0.40461712975183972 6.1425328127115941 ;
@@ -4003,7 +4002,6 @@ createNode mesh -n "HS_Small_Broken_BotShape" -p "HS_Small_Broken_Bot";
 	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "Crypt";
 	rename -uid "A33DDCC1-4374-79F9-DFCC-F5829716187F";
-	setAttr ".v" no;
 	setAttr ".t" -type "double3" -6.3592620539138869 2.9063837963110331 -4.6314936314244459 ;
 	setAttr ".r" -type "double3" 0 13.335382267244139 0 ;
 createNode transform -n "Right_Door" -p "Crypt";
@@ -4125,9 +4123,10 @@ createNode transform -n "Cypt" -p "Crypt";
 createNode mesh -n "CyptShape" -p "Cypt";
 	rename -uid "3F0E80C4-400E-22A2-4B40-BFA1E4660867";
 	setAttr -k off ".v";
+	setAttr -s 4 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.375 0.5 ;
+	setAttr ".pv" -type "double2" 0.5 0.25 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -7204,7 +7203,7 @@ createNode mesh -n "GroundShape" -p "Ground";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.5 ;
+	setAttr ".pv" -type "double2" 0.1250000037252903 0.67500001192092896 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -7443,124 +7442,6 @@ createNode mesh -n "Fence_Foundation_Shape2" -p "Fence_Foundation_2";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Fence_1";
-	rename -uid "6234FC03-49E1-50B0-F889-178D5390448D";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 4.7693777497639331 2.7565231033236 8.3671726900518308 ;
-	setAttr ".s" -type "double3" 5.7260064638205526 3.8165061023370757 0.4246551181500331 ;
-	setAttr ".rp" -type "double3" 3.7711061500279843 -1.8986980625063394 0.24993185445183791 ;
-	setAttr ".rpt" -type "double3" -0.44584348729984402 0 -0.52105237470386268 ;
-	setAttr ".sp" -type "double3" 0.57416250571825467 -0.49999999973183035 0.49999965071611641 ;
-	setAttr ".spt" -type "double3" 3.1969436443097297 -1.3986980627745091 -0.2500677962642785 ;
-createNode mesh -n "Fence_Shape1" -p "Fence_1";
-	rename -uid "5FA8B3CD-4332-89C6-B8AE-A2A64D396478";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt[2:5]" -type "float3"  0 -0.30224481 0 0 -0.30224481 
-		0 0 -0.30224481 0 0 -0.30224481 0;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "Fence_2";
-	rename -uid "4A26F970-4C94-DE16-A6A9-5C8C55779134";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 7.8447084097150466 2.7565231043470719 5.7164968688913813 ;
-	setAttr ".r" -type "double3" 0 90 0 ;
-	setAttr ".s" -type "double3" 5.7260064638205526 3.8165061023370757 0.4246551181500331 ;
-	setAttr ".rp" -type "double3" -2.3795553009084234 -1.898698063529811 0.24993200277702807 ;
-	setAttr ".rpt" -type "double3" 2.6294873036854525 0 2.1296232981313952 ;
-	setAttr ".sp" -type "double3" -0.49999999999999989 -0.49999999999999994 0.50000000000000711 ;
-	setAttr ".spt" -type "double3" -1.8795553009084234 -1.398698063529811 -0.25006799722297907 ;
-createNode mesh -n "Fence_Shape2" -p "Fence_2";
-	rename -uid "A760CF4E-4E5B-DC4B-10C2-DA816FE0EE9C";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 4 ".pt[2:5]" -type "float3"  0 -0.30224481 0 0 -0.30224481 
-		0 0 -0.30224481 0 0 -0.30224481 0;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Tree";
 	rename -uid "F12507F0-45F3-7DBE-E45F-0283A6D64539";
 	setAttr ".v" no;
@@ -7576,23 +7457,22 @@ createNode mesh -n "TreeShape" -p "Tree";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode transform -n "Temp";
-	rename -uid "B8956CEE-4039-C1D7-B8F4-38895B2BDE00";
-	setAttr ".v" no;
-createNode aiSkyDomeLight -n "TempShape" -p "Temp";
-	rename -uid "5A58865C-448A-11F4-DF71-D4A8312BBEC1";
+createNode transform -n "aiSkyDomeLight1";
+	rename -uid "9825C9AB-4B51-1599-F553-789642CC4743";
+createNode aiSkyDomeLight -n "aiSkyDomeLightShape1" -p "aiSkyDomeLight1";
+	rename -uid "52E89516-4199-A1FB-51F9-2580190EC220";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -k off ".v";
 	setAttr ".csh" no;
 	setAttr ".rcsh" no;
-	setAttr ".sc" -type "float3" 0.12494165 0.11202798 0.13986014 ;
-	setAttr ".intensity" 3.0069930553436279;
-	setAttr ".ai_exposure" 1.0283688306808472;
+	setAttr ".sc" -type "float3" 0.57342654 0.57342654 0.57342654 ;
+	setAttr ".intensity" 0.62937062978744507;
+	setAttr ".ai_exposure" 0.53191488981246948;
 	setAttr ".aal" -type "attributeAlias" {"exposure","aiExposure"} ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "8043DD3B-4AAE-C587-5BD9-E085512C7208";
-	setAttr -s 5 ".lnk";
-	setAttr -s 5 ".slnk";
+	setAttr -s 7 ".lnk";
+	setAttr -s 7 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "6A00677E-4F7E-33FD-4B68-A39404FA5273";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
@@ -8813,37 +8693,11 @@ createNode lambert -n "CryptWhite1";
 createNode shadingEngine -n "CryptWhite";
 	rename -uid "81C0DF75-49C0-56A8-3568-40A6D0DCF988";
 	setAttr ".ihi" 0;
-	setAttr -s 3 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
 createNode materialInfo -n "materialInfo3";
 	rename -uid "191BC441-4F0C-00D9-8AC1-F495FED2BDE5";
-createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "CF65311B-4D98-93C6-37B6-8497A09597E0";
-	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
-	setAttr ".tgi[0].vl" -type "double2" -388.27360331376201 -882.79720240552842 ;
-	setAttr ".tgi[0].vh" -type "double2" 528.14882669334895 168.39323201439285 ;
-	setAttr -s 7 ".tgi[0].ni";
-	setAttr ".tgi[0].ni[0].x" 338.57144165039062;
-	setAttr ".tgi[0].ni[0].y" -147.14285278320312;
-	setAttr ".tgi[0].ni[0].nvs" 1923;
-	setAttr ".tgi[0].ni[1].x" 31.428571701049805;
-	setAttr ".tgi[0].ni[1].y" -147.14285278320312;
-	setAttr ".tgi[0].ni[1].nvs" 1923;
-	setAttr ".tgi[0].ni[2].x" 88.571426391601562;
-	setAttr ".tgi[0].ni[2].y" -528.5714111328125;
-	setAttr ".tgi[0].ni[2].nvs" 1923;
-	setAttr ".tgi[0].ni[3].x" 395.71429443359375;
-	setAttr ".tgi[0].ni[3].y" -528.5714111328125;
-	setAttr ".tgi[0].ni[3].nvs" 1923;
-	setAttr ".tgi[0].ni[4].x" -259.14642333984375;
-	setAttr ".tgi[0].ni[4].y" 38.994182586669922;
-	setAttr ".tgi[0].ni[4].nvs" 1923;
-	setAttr ".tgi[0].ni[5].x" 31.150421142578125;
-	setAttr ".tgi[0].ni[5].y" 49.101783752441406;
-	setAttr ".tgi[0].ni[5].nvs" 1923;
-	setAttr ".tgi[0].ni[6].x" -271.17254638671875;
-	setAttr ".tgi[0].ni[6].y" -492.85714721679688;
-	setAttr ".tgi[0].ni[6].nvs" 1923;
 createNode polyCylinder -n "polyCylinder2";
 	rename -uid "3529E1E6-47B3-2754-4A20-E09DAAF09D1F";
 	setAttr ".sa" 10;
@@ -8866,9 +8720,94 @@ createNode polyBevel3 -n "polyBevel18";
 	setAttr ".mv" yes;
 	setAttr ".mvt" 0.0001;
 	setAttr ".sa" 30;
+createNode blinn -n "FenceMetal";
+	rename -uid "B6CEB368-433D-4638-491C-E58E071C40D0";
+	setAttr ".dc" 0.88111889362335205;
+	setAttr ".c" -type "float3" 0.097775996 0.099554084 0.14399999 ;
+	setAttr ".ambc" -type "float3" 0.1 0.1 0.1 ;
+	setAttr ".rfl" 0.67132866382598877;
+	setAttr ".rc" -type "float3" 0.3373 0.37850001 0.57340002 ;
+	setAttr ".ec" 0.62930768728256226;
+	setAttr ".sro" 0.81118881702423096;
+createNode shadingEngine -n "blinn1SG";
+	rename -uid "613DC1AA-41CF-1658-DE6C-8D891DF4A320";
+	setAttr ".ihi" 0;
+	setAttr -s 32 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo4";
+	rename -uid "D04398E2-4276-F502-3103-F196451E46CB";
+createNode lambert -n "Foundation";
+	rename -uid "F20A7F88-4752-216C-C534-D8972D179EC8";
+	setAttr ".dc" 0.70629370212554932;
+	setAttr ".c" -type "float3" 0.27972028 0.27972028 0.27972028 ;
+createNode shadingEngine -n "lambert4SG";
+	rename -uid "00FDDCD2-4C8B-77F8-FA27-6F986561A402";
+	setAttr ".ihi" 0;
+	setAttr -s 3 ".dsm";
+	setAttr ".ro" yes;
+createNode materialInfo -n "materialInfo5";
+	rename -uid "C20F3AB1-4472-5FED-B3CD-E683C108C6E0";
+createNode groupId -n "groupId1";
+	rename -uid "1CEF1A76-4619-D0A8-F462-6EBEA350F411";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts1";
+	rename -uid "41A6E8A7-4C3A-CFCF-F1E8-C3AB830F2AEA";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 2 "f[1:39]" "f[41:64]";
+	setAttr ".irc" -type "componentList" 3 "f[0]" "f[40]" "f[65:76]";
+createNode groupId -n "groupId2";
+	rename -uid "87E5A245-4D77-EC62-37F3-04AB6720AED6";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId3";
+	rename -uid "4AA5FCA8-4F8C-3188-2B04-47800762CC9A";
+	setAttr ".ihi" 0;
+createNode groupParts -n "groupParts2";
+	rename -uid "1201A39C-441E-4533-AF45-41912A57AE4F";
+	setAttr ".ihi" 0;
+	setAttr ".ic" -type "componentList" 3 "f[0]" "f[40]" "f[65:76]";
+	setAttr ".irc" -type "componentList" 2 "f[39]" "f[43]";
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "5C6511DA-471A-FCD8-5DB3-BEA3D03CDCF8";
+	rename -uid "996AFF38-4DB2-538D-27B1-96BDDA98FFFB";
 	setAttr ".sst" -type "string" "";
+createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
+	rename -uid "E4E46D59-4DC9-59FB-9215-1B8ACEDB7723";
+	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
+	setAttr ".tgi[0].vl" -type "double2" -149.57791574312972 -1499.547015932033 ;
+	setAttr ".tgi[0].vh" -type "double2" 499.16447042391695 -755.40133768159683 ;
+	setAttr -s 11 ".tgi[0].ni";
+	setAttr ".tgi[0].ni[0].x" 31.150421142578125;
+	setAttr ".tgi[0].ni[0].y" 49.101783752441406;
+	setAttr ".tgi[0].ni[0].nvs" 1923;
+	setAttr ".tgi[0].ni[1].x" -259.14642333984375;
+	setAttr ".tgi[0].ni[1].y" 38.994182586669922;
+	setAttr ".tgi[0].ni[1].nvs" 1923;
+	setAttr ".tgi[0].ni[2].x" 31.428571701049805;
+	setAttr ".tgi[0].ni[2].y" -147.14285278320312;
+	setAttr ".tgi[0].ni[2].nvs" 1923;
+	setAttr ".tgi[0].ni[3].x" 338.57144165039062;
+	setAttr ".tgi[0].ni[3].y" -147.14285278320312;
+	setAttr ".tgi[0].ni[3].nvs" 1923;
+	setAttr ".tgi[0].ni[4].x" 88.571426391601562;
+	setAttr ".tgi[0].ni[4].y" -528.5714111328125;
+	setAttr ".tgi[0].ni[4].nvs" 1923;
+	setAttr ".tgi[0].ni[5].x" 285.71429443359375;
+	setAttr ".tgi[0].ni[5].y" -842.85711669921875;
+	setAttr ".tgi[0].ni[5].nvs" 1923;
+	setAttr ".tgi[0].ni[6].x" -17.850948333740234;
+	setAttr ".tgi[0].ni[6].y" -841.66461181640625;
+	setAttr ".tgi[0].ni[6].nvs" 1923;
+	setAttr ".tgi[0].ni[7].x" 395.71429443359375;
+	setAttr ".tgi[0].ni[7].y" -528.5714111328125;
+	setAttr ".tgi[0].ni[7].nvs" 1923;
+	setAttr ".tgi[0].ni[8].x" 235.71427917480469;
+	setAttr ".tgi[0].ni[8].y" -1242.857177734375;
+	setAttr ".tgi[0].ni[8].nvs" 1923;
+	setAttr ".tgi[0].ni[9].x" -70.236030578613281;
+	setAttr ".tgi[0].ni[9].y" -1241.66455078125;
+	setAttr ".tgi[0].ni[9].nvs" 1923;
+	setAttr ".tgi[0].ni[10].x" -587.14288330078125;
+	setAttr ".tgi[0].ni[10].y" -978.5714111328125;
+	setAttr ".tgi[0].ni[10].nvs" 1923;
 select -ne :time1;
 	setAttr ".o" 99;
 	setAttr ".unw" 99;
@@ -8880,10 +8819,10 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
-	setAttr -s 5 ".st";
+	setAttr -s 7 ".st";
 select -ne :renderGlobalsList1;
 select -ne :defaultShaderList1;
-	setAttr -s 8 ".s";
+	setAttr -s 10 ".s";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
@@ -8892,7 +8831,7 @@ select -ne :standardSurface1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 40 ".dsm";
+	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -8926,7 +8865,12 @@ connectAttr "polySoftEdge5.out" "HS_Normal_BrokenShape.i";
 connectAttr "polySoftEdge4.out" "HS_Cross_Broken_2Shape.i";
 connectAttr "polySoftEdge1.out" "HS_Small_Broken_1Shape.i";
 connectAttr "polySoftEdge2.out" "HS_Small_Broken_BotShape.i";
-connectAttr "deleteComponent19.og" "CyptShape.i";
+connectAttr "groupId1.id" "CyptShape.iog.og[0].gid";
+connectAttr "CryptWhite.mwc" "CyptShape.iog.og[0].gco";
+connectAttr "groupId3.id" "CyptShape.iog.og[1].gid";
+connectAttr "lambert4SG.mwc" "CyptShape.iog.og[1].gco";
+connectAttr "groupParts2.og" "CyptShape.i";
+connectAttr "groupId2.id" "CyptShape.ciog.cog[0].cgid";
 connectAttr "polyBevel18.out" "|Fence|Fence|Spike|SpikeShape.i";
 connectAttr "polyCylinder2.out" "|Fence|Fence|Pole|PoleShape.i";
 connectAttr "polyExtrudeFace1.out" "GroundShape.i";
@@ -8937,11 +8881,15 @@ relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightS
 relationship "link" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "CryptWhite.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "link" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert2SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "lambert3SG.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" "CryptWhite.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "blinn1SG.message" ":defaultLightSet.message";
+relationship "shadowLink" ":lightLinker1" "lambert4SG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
@@ -9120,79 +9068,99 @@ connectAttr "CyptShape.wm" "polyBevel17.mp";
 connectAttr "polyBevel17.out" "deleteComponent18.ig";
 connectAttr "deleteComponent18.og" "deleteComponent19.ig";
 connectAttr "CryptWhite1.oc" "CryptWhite.ss";
-connectAttr "CyptShape.iog" "CryptWhite.dsm" -na;
 connectAttr "Left_DoorShape.iog" "CryptWhite.dsm" -na;
 connectAttr "Right_DoorShape.iog" "CryptWhite.dsm" -na;
+connectAttr "CyptShape.iog.og[0]" "CryptWhite.dsm" -na;
+connectAttr "CyptShape.ciog.cog[0]" "CryptWhite.dsm" -na;
+connectAttr "groupId1.msg" "CryptWhite.gn" -na;
+connectAttr "groupId2.msg" "CryptWhite.gn" -na;
 connectAttr "CryptWhite.msg" "materialInfo3.sg";
 connectAttr "CryptWhite1.msg" "materialInfo3.m";
-connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
-		;
-connectAttr "Ground_WB.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
-		;
-connectAttr "Headstone_Grey.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
-		;
-connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
-		;
-connectAttr "CryptWhite1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
-		;
-connectAttr "CryptWhite.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
-		;
-connectAttr "TempShape.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
-		;
 connectAttr "polyCone1.out" "polyBevel18.ip";
 connectAttr "|Fence|Fence|Spike|SpikeShape.wm" "polyBevel18.mp";
+connectAttr "FenceMetal.oc" "blinn1SG.ss";
+connectAttr "|Fence|Fence|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence1|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence1|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence2|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence2|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence3|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence3|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence4|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence4|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence5|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence5|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence6|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence6|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence7|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence7|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence8|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence8|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence9|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence9|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence10|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence10|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence11|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence11|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence12|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence12|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence13|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence13|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence14|Pole|PoleShape.iog" "blinn1SG.dsm" -na;
+connectAttr "|Fence|Fence14|Spike|SpikeShape.iog" "blinn1SG.dsm" -na;
+connectAttr "ConnectorShape.iog" "blinn1SG.dsm" -na;
+connectAttr "Connector1Shape.iog" "blinn1SG.dsm" -na;
+connectAttr "blinn1SG.msg" "materialInfo4.sg";
+connectAttr "FenceMetal.msg" "materialInfo4.m";
+connectAttr "Foundation.oc" "lambert4SG.ss";
+connectAttr "Fence_Foundation_Shape2.iog" "lambert4SG.dsm" -na;
+connectAttr "Fence_Foundation_Shape1.iog" "lambert4SG.dsm" -na;
+connectAttr "CyptShape.iog.og[1]" "lambert4SG.dsm" -na;
+connectAttr "groupId3.msg" "lambert4SG.gn" -na;
+connectAttr "lambert4SG.msg" "materialInfo5.sg";
+connectAttr "Foundation.msg" "materialInfo5.m";
+connectAttr "deleteComponent19.og" "groupParts1.ig";
+connectAttr "groupId1.id" "groupParts1.gi";
+connectAttr "groupParts1.og" "groupParts2.ig";
+connectAttr "groupId3.id" "groupParts2.gi";
+connectAttr "CryptWhite.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
+		;
+connectAttr "CryptWhite1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[1].dn"
+		;
+connectAttr "Ground_WB.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[2].dn"
+		;
+connectAttr "lambert2SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[3].dn"
+		;
+connectAttr "Headstone_Grey.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[4].dn"
+		;
+connectAttr "blinn1SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[5].dn"
+		;
+connectAttr "FenceMetal.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[6].dn"
+		;
+connectAttr "lambert3SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[7].dn"
+		;
+connectAttr "lambert4SG.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[8].dn"
+		;
+connectAttr "Foundation.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[9].dn"
+		;
+connectAttr "aiSkyDomeLightShape1.msg" "hyperShadePrimaryNodeEditorSavedTabsInfo.tgi[0].ni[10].dn"
+		;
 connectAttr "lambert2SG.pa" ":renderPartition.st" -na;
 connectAttr "lambert3SG.pa" ":renderPartition.st" -na;
 connectAttr "CryptWhite.pa" ":renderPartition.st" -na;
+connectAttr "blinn1SG.pa" ":renderPartition.st" -na;
+connectAttr "lambert4SG.pa" ":renderPartition.st" -na;
 connectAttr "Ground_WB.msg" ":defaultShaderList1.s" -na;
 connectAttr "Headstone_Grey.msg" ":defaultShaderList1.s" -na;
 connectAttr "CryptWhite1.msg" ":defaultShaderList1.s" -na;
+connectAttr "FenceMetal.msg" ":defaultShaderList1.s" -na;
+connectAttr "Foundation.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "TempShape.ltd" ":lightList1.l" -na;
-connectAttr "Fence_Foundation_Shape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Fence_Foundation_Shape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Fence_Shape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Fence_Shape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "aiSkyDomeLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "TreeShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "BaseCrossHSShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "BaseNormalHSShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "BaseSmallHSShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence1|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence1|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence2|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence2|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence3|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence3|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence4|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence4|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence5|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence5|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence6|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence6|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence7|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence7|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence8|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence8|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence9|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence9|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence10|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na
-		;
-connectAttr "|Fence|Fence10|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence11|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na
-		;
-connectAttr "|Fence|Fence11|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence12|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na
-		;
-connectAttr "|Fence|Fence12|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence13|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na
-		;
-connectAttr "|Fence|Fence13|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "|Fence|Fence14|Spike|SpikeShape.iog" ":initialShadingGroup.dsm" -na
-		;
-connectAttr "|Fence|Fence14|Pole|PoleShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "ConnectorShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Connector1Shape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "Temp.iog" ":defaultLightSet.dsm" -na;
+connectAttr "aiSkyDomeLight1.iog" ":defaultLightSet.dsm" -na;
 // End of GraveYard.ma
