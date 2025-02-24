@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: GraveYard.ma
-//Last modified: Sun, Feb 23, 2025 09:34:59 PM
+//Last modified: Sun, Feb 23, 2025 09:36:20 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -15,7 +15,7 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Pro v2009 (Build: 26100)";
-fileInfo "UUID" "510E2854-4D35-4AA6-5ABC-0E831F195D43";
+fileInfo "UUID" "13095B09-4C00-C4EE-4E9D-BDA941A2CBBB";
 createNode transform -s -n "persp";
 	rename -uid "37EE6301-45BA-6FF3-110C-06A78CA0852B";
 	setAttr ".t" -type "double3" 5.68498257198892 -10.033260200815054 2.2823012120664288 ;
@@ -65,8 +65,8 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "back";
 	rename -uid "EA1EC555-45A7-0956-8457-2591489292CD";
-	setAttr ".t" -type "double3" -10.561089563306645 11.192046618960077 5.489822311023528 ;
-	setAttr ".r" -type "double3" -20.40000000000153 5010.799999999982 0 ;
+	setAttr ".t" -type "double3" -6.8418098274546217 11.632344426495994 6.5607036223458053 ;
+	setAttr ".r" -type "double3" -22.800000000000971 5031.9999999999618 -4.0147647665566685e-16 ;
 	setAttr ".rpt" -type "double3" 7.8836286830933667e-15 -1.5845677389953322e-14 -1.2756095351173673e-13 ;
 createNode camera -n "backShape" -p "back";
 	rename -uid "9B56721E-48C1-A53D-1E11-8C939AA23EFB";
@@ -26305,7 +26305,7 @@ createNode polyTweakUV -n "polyTweakUV70";
 		 -0.00058972836 0.010789394 0.0011014938 0.010401607 0.00069028139 0.010641962 -0.016560793
 		 0.0081798732 -0.016446948 0.0082263052;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "417A9DEF-42FA-25C0-CAF8-7DB21A7D0E30";
+	rename -uid "0358EF02-465A-B9EE-7495-65B06EF3CC05";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 99;
